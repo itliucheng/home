@@ -54,9 +54,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //.antMatchers("/","/hello").permitAll()//定义/请求不需要验证
                 .anyRequest().authenticated()//其余的所有请求都需要验证
                 .and()
-                .logout()
-                .permitAll()//定义logout不需要验证
-                .and()
+                //.logout()
+               // .permitAll()//定义logout不需要验证
+               // .and()
                 .formLogin();//使用form表单登录
 
         http.exceptionHandling().authenticationEntryPoint(casAuthenticationEntryPoint())
