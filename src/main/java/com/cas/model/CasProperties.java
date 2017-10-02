@@ -1,15 +1,12 @@
-package com.cas;
+package com.cas.model;
 
 /**
  * Created by wangliucheng on 2017/9/19 0019.
+ *  * CAS的配置参数
  */
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-/**
- * CAS的配置参数
- * @author ChengLi
- */
 @Component
 @Data
 public class CasProperties {

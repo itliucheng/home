@@ -1,4 +1,4 @@
-package com.cas;
+package com.cas.config;
 
 import org.springframework.security.core.GrantedAuthority;
 

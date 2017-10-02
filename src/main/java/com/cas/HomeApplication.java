@@ -19,26 +19,4 @@ public class HomeApplication {
 		SpringApplication.run(HomeApplication.class, args);
 	}
 
-	@RequestMapping(value = "/index",method = RequestMethod.GET)
-	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("index");
-		return mv;
-	}
-
-	@RequestMapping("/hello")
-	public String hello() {
-		return "不验证哦";
-	}
-
-	@PreAuthorize("hasAuthority('TEST')")//有TEST权限的才能访问
-	@RequestMapping("/security")
-	public String security() {
-		return "hello world security";
-	}
-
-	@PreAuthorize("hasAuthority('ADMIN')")//必须要有ADMIN权限的才能访问
-	@RequestMapping("/authorize")
-	public String authorize() {
-		return "有权限访问";
-	}
 }
