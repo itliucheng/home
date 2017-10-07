@@ -10,21 +10,18 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class CasProperties {
-    @Value("${cas.server.host.url}")
-    private String casServerUrl;
+    @Value("${app.service.security}")
+    private String appServiceSecurity;
 
-    @Value("${cas.server.host.login_url}")
-    private String casServerLoginUrl;
+    @Value("${app.service.home}")
+    private String appServiceHome;
 
-    @Value("${cas.server.host.logout_url}")
-    private String casServerLogoutUrl;
+    @Value("${cas.service.login}")
+    private String casServiceLogin;
 
-    @Value("${app.server.host.url}")
-    private String appServerUrl;
+    @Value("${cas.service.logout}")
+    private String casServiceLogout;
 
-    @Value("${app.login.url}")
-    private String appLoginUrl;
-
-    @Value("${app.logout.url}")
-    private String appLogoutUrl;
+    @Value("${cas.url.prefix}")
+    private String casUrlPrefix;
 }

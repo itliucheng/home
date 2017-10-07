@@ -20,7 +20,7 @@ public class HomeController {
     public String index(HttpServletRequest request) {
 
         UserInfo userInfo = (UserInfo) SecurityContextHolder.getContext().getAuthentication() .getPrincipal();
-        String name = userInfo.getName();
+        String name = userInfo.getUid();
         String role = null;
         Set<AuthorityInfo> authorities = userInfo.getAuthorities();
         if(authorities.iterator().hasNext()){
